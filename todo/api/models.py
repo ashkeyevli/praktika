@@ -24,8 +24,9 @@ class Task(models.Model):
      due_on = models.DateTimeField(datetime.datetime.now,blank=True)
      COMPLETE = 'COMPLETE'
      IN_PROGRESS = 'IN PROGRESS'
-     TASK_STATUS_CHOICES = (
-         IN_PROGRESS, "IN PROGRESS")
+     TASK_STATUS_CHOICES = [
+         COMPLETE, "COMPLETE",
+         IN_PROGRESS, "IN PROGRESS"]
      status = models.CharField(default=IN_PROGRESS, max_length=50)
      task_list = models.ForeignKey(TaskList, on_delete=models.DO_NOTHING)
 
