@@ -34,19 +34,9 @@ class Task(models.Model):
          return '{}: {}'.format(self.id, self.name)
      def tojson(self):
          return 'id:{} name:{} status:{}'.format(self.id, self.name,self.status)
-     def tojson(self):
-         return 'id:{}, name:{}, status:{}'.format(self.id, self.name,self.status)
 
      def tojson2(self):
          return 'id:{},  name:{},  created_at:{},  due_on:{},  status:{}'.format(self.id, self.name,self.created_at,self.due_on, self.status)
-
-
-
-     #def __str__(self):
-      #  return '{}'.format(self.name)
-
-     #def tojson(self):
-      #  return '{}'.format(self.name)
 
 
 
